@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url('./images/bg.jpg') no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    color: white;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+/* search box */
+.search_container{
+    display: flex;
+    justify-content: center;
+}
+.search_box{
+    width: 30%;
+    height: 50px;
+    margin-top:4vh;
+    border: 2px solid white;
+    border-radius: 20px;
+    position: relative;
+    background-color: black;
+}
+.search_box:hover{
+    border: 2px solid #000;
+    background-color: rgba(0, 0, 0, 0.493);
+
+}
+.search_box input{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 20px;
+    padding: 15px;
+    outline: none;
+    border: none;
+    background: none;
+    color: rgb(255, 255, 255);
+}
+input::placeholder{
+    color: white;
+    font-size: 15px;
+}
+#search-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 55px;
+    height: 100%;
+    background: none;
+    border-radius: 18px;
+    color: white;
+}
+#search-btn:hover{
+    color: aqua;
+    box-sizing: 0px 0px 40px #3203a2;
+    background-color: rgb(33, 0, 63);
+}
+
+.current{
+    display: flex;
+    justify-content: space-between;
+}
+.current .left{
+    margin: 50px;
+    padding: 2vw 3vw;
+    background-color: #00000058;
+    border-radius: 10px;
+}
+.current .left:hover{
+    border-right: 3px solid#13003e;
+    box-shadow: 0 0 100px #fff20177;
+    border-bottom:3px solid #13003e;
+}
+.current .left .time{
+    font-size: 55px;
+    color: rgb(0, 203, 239);
+}
+.left .date-section{
+    display: flex;
+    padding: 0px 10px;
+}
+.left .date-section .date{
+    padding-left: 5px;
+}
+.current .right{
+    margin: 50px;
+    position: relative;
+}
+.right .time-zone{
+    font-size: 2vw;
+    color: #ffffff;
+}
+.right .city{
+    font-size: 2vw;
+    position: absolute;
+    right: 0;
+    color: #ffffffd5;
+    margin-top: 10px;
+    margin-right: 45px;
+    align-items: center;
+}
+.title{
+    margin-left: 50px;
+    font-size: 15px;
+}
+.today-section{
+    margin-top: 35px;
+}
+.today{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+.today .img-des{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.today .img-des img{
+    height: 130px;
+}
+.today .img-des .des{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.day-night-temp{
+    display: flex;
+    flex-direction: column;
+    background-color: #0000005a;
+    border-radius: 30px;
+    margin: 50px 50px;
+    padding: 2vw 3vw;
+    box-shadow: 1px 0px gray;
+}
+.day-night-temp .temp{
+    display: flex;
+    flex-direction: column;
+    font-size: 45px;
+}
+.day-night-temp .heading{
+    font-size: 10px;
+    padding-left: 2px;
+    padding-top: 25px;
+    color: rgb(255, 255, 255);
+}
+.today .weather-items{
+    display: flex;
+    text-align: center;
+    margin-left: 15px;
+    margin-top: 25px;
+}
+.today .weather-items .humidity{
+    margin-right: 70px;
+}
+.weather-items p{
+    font-size: 10px;
+    color: white;
+    padding-bottom: 10px;
+}
+.sep{
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, #CCC, transparent);
+}
+.weather-items .value{
+    font-size: 30px;
+    padding-top: 10px;
+}
+.today .weather-items img{
+    height: 80px;
+}
+.sun-moon{
+    display: flex;
+    width: 400px;
+    justify-content: space-evenly;
+    background-color: rgba(15, 15, 15,0.5);
+    margin: 20px;
+    margin-top: 6px;
+    border-radius: 15px;
+}
+.sun-moon img{
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    filter: invert(1);
+}
+.sun-moon .time{
+    display: flex;
+    margin: 10px;
+}
+.sun-moon p{
+    font-size: 15px;
+}
+.sun-moon .time p{
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 25px;
+}
+.sun{
+    margin: 20px;
+}
+.moon{
+    margin: 20px;
+}
+@media all and (max-width: 600px) {
+    body{
+    background: url('./images/bg.jpg') no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    color: white;
+    overflow-x: hidden;
+    }
+    .search_box {
+        width: 75%;
+        height: 36px;
+        border-radius: 14px;
+    }
+    #search-btn {
+        width: 58px;
+        border-radius: 15px;
+    }
+    .current .left .time{
+        font-size: 30px;
+    }
+    .am-pm{
+        font-size: 12px;
+    }
+    .current .left {
+        margin: 18px;
+    }
+    .left .date-section{
+        font-size: 12px;
+    }
+    .right .time-zone {
+        font-size: 17px;
+    }
+    .current .right {
+        margin: 18px;
+    }
+    .right .city {
+        font-size: 12px;
+    }
+    .title {
+        margin: 0px auto;
+        text-align: center;
+        font-size: 12px;
+    }
+    
+    
+    .today {
+        display: flex;
+        justify-content: start;
+        margin-top: 0px;
+    }
+    .today .img-des {
+        display: inline-flex;
+        margin-left: 8px;
+        margin-top: 0px;
+    }
+    .today .img-des .des {
+        display: inline;
+        font-size: 15px;
+        text-align: center;
+        padding: 38px 0px;
+    }
+    .today .img-des img {
+        height: 81px;
+    }
+    .day-night-temp .temp {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+    }
+    .day-night-temp .heading {
+        font-size: 8px;
+        padding-top: 13px;
+    }
+    .today .weather-items img {
+        height: 40px;
+    }
+    .weather-items .value {
+        font-size: 20px;
+        padding-top: 4px;
+    }
+    .weather-items p {
+        font-size: 9px;
+        color: white;
+        padding-bottom: 5px;
+    }
+    .sun-moon {
+        width: 321px;
+        margin: 10px;
+        margin-top: 5px;
+    }
+    .sun-moon p {
+        font-size: 12px;
+    }
+    .sun-moon .time p {
+        font-size: 15px;
+    }
+}
